@@ -6,7 +6,7 @@ class Armor:
 		self.name = row[0]
 		self.ar = float(row[1])
 		self.w = float(row[15])
-		self.var = pulp.LpVariable(self, 0, 1, pulp.LpInteger)
+		self.var = pulp.LpVariable(self.name, 0, 1, pulp.LpInteger)
 
 	def __repr__(self):
 		return "Armor(%s, %f, %f)" % (self.name, self.ar, self.w)
